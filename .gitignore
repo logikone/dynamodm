@@ -1,0 +1,7 @@
+.vscode
+docs
+node_modules
+dist
+*.swp
+.nyc_output
+coverage

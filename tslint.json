@@ -1,0 +1,26 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "jsRules": {},
+  "rules": {
+    "arrow-parens": false,
+    "forin": false,
+    "interface-name": [
+      "never-prefix"
+    ],
+    "member-access": false,
+    "no-console": false,
+    "no-empty": false,
+    "no-namespace": false,
+    "quotemark": [
+      "single"
+    ],
+    "trailing-comma": false,
+    "variable-name": [
+      "allow-leading-underscore"
+    ]
+  },
+  "rulesDirectory": []
+}

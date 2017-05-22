@@ -1,0 +1,73 @@
+{
+  "name": "dynamodm",
+  "version": "0.0.0",
+  "description": "DynamoDB Object Document Mapper",
+  "main": "dist/index.js",
+  "scripts": {
+    "commit": "git-cz",
+    "commitmsg": "validate-commit-msg",
+    "docs": "typedoc",
+    "test:jasmine": "ts-node test.js",
+    "test:nyc": "nyc",
+    "test": "npm run test:nyc -- npm run test:jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/logikone/dynamodm.git"
+  },
+  "keywords": [
+    "dynamodb",
+    "odm",
+    "schema"
+  ],
+  "author": {
+    "name": "Chris Larsen",
+    "url": "http://github.com/logikone"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/logikone/dynamodm/issues"
+  },
+  "homepage": "https://github.com/logikone/dynamodm#readme",
+  "devDependencies": {
+    "@types/jasmine": "^2.5.47",
+    "@types/node": "^7.0.18",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
+    "husky": "^0.13.3",
+    "jasmine": "^2.6.0",
+    "jasmine-spec-reporter": "^4.1.0",
+    "nyc": "^10.3.2",
+    "ts-node": "^3.0.4",
+    "tslint": "^5.2.0",
+    "typedoc": "^0.7.1",
+    "typescript": "^2.3.2",
+    "validate-commit-msg": "^2.12.1"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.54.0",
+    "reflect-metadata": "^0.1.10"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "nyc": {
+    "all": true,
+    "cache": true,
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "src/**/*.spec.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "reporter": [
+      "html",
+      "text"
+    ]
+  }
+}
